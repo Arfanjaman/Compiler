@@ -1,0 +1,10 @@
+int main() Manifest
+  Metal x = 5;
+  Reveal("x=%d\n", x);
+  Intent (x > 0 Together Not(x == 2)) Manifest
+    Reveal("inside if\n");
+  Conceal
+  Ascend 0;
+Conceal
+// this is  comment
+/* this is a multi line comment*/
