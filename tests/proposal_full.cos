@@ -1,0 +1,30 @@
+spren Metal Count;
+
+Order Day Manifest
+    Sun, Mon, Tue
+Conceal
+
+Surge Pair Manifest
+    Metal left;
+    Metal right;
+Conceal
+
+SoulCast Metal sum_pair(Pair p) Manifest
+    Ascend p.left + p.right;
+Conceal
+
+SoulCast Abyss main() Manifest
+    Count c = 5;
+    Day today = Mon;
+    Pair p = Pair(10, 20);
+    Metal[] nums = [1, 2, 3];
+
+    Reveal(c);
+    Reveal(today);
+    Reveal(p.left);
+    p.right = 99;
+    Reveal(sum_pair(p));
+    Reveal(nums[1]);
+    nums[1] = 7;
+    Reveal(nums[1]);
+Conceal
