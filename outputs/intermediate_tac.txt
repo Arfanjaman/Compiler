@@ -1,0 +1,5 @@
+func main:
+t1 = 1
+print t1
+end func main
+

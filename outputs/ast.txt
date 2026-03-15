@@ -1,0 +1,6 @@
+PROGRAM
+  FUNCTION name=main return=Abyss
+    BODY
+      BLOCK
+        REVEAL
+          LITERAL value=1

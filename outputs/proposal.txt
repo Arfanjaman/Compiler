@@ -1,0 +1,149 @@
+CosmereLang - Compiler
+A cosmere themed programming language based on C
+
+
+MD. Eftakar Jaman Arfan
+2107030
+3rd Year 2nd Semester
+Computer Science And Engineering
+CSE 3212 : Compiler Design Laboratory
+Overview
+
+As an avid fan of Brandosn Sanderson’s Cosmere Universe i decided to design this language
+using some Fantasy jargon used in the books written by Brandon Sanderson.
+a C-style syntax to make programs easy to read and structured. CosmereLang is
+type-dependent and supports basic programming constructs along with a few unique
+features for improved readability..
+
+
+
+Introduction
+CosmereLang reimagines common programming constructs—such as data types, control
+flow, and function semantics—using meaningful, lore-inspired terminology (e.g., Metal,
+Essence, Ascend, ShardForm) while preserving the logical foundations of imperative
+programming. The language is designed to remain simple, deterministic, and
+compiler-friendly, making it suitable for implementation using Lex/Flex for lexical analysis
+and Yacc/Bison for syntax analysis.
+
+The primary motivation of this project is educational: to demonstrate how a high-level
+language can be designed, tokenized, parsed, and semantically validated, while also
+showing how creative inspiration can coexist with formal compiler construction principles.
+CosmereLang serves as both a functional programming language prototype and a practical
+exploration of compiler design concepts taught in the course.
+
+The detailed language constructs are described in the table below.
+CosmereLang — Keyword/Symbol Table
+
+Identifier rule: [a-zA-Z_][a-zA-Z0-9_]*
+Number rule: int: [0-9]+, float: [0-9]+\\.[0-9]+
+Comments: // line and /* block */
+
+
+ Category            C                    Your Syntax          Description            Example
+                     Keyword/Symbol
+
+ Declarations        int                  Metal                Integer type           Metal x = 10;
+
+ Declarations        float                Essence              Floating type          Essence x = 10;
+
+ Declarations        double               DoubleEssence        Double precision       DoubleEssence x = 10;
+
+ Declarations        char                 Glyph                Character type         Glyph x = 10;
+
+ Declarations        void                 Abyss                No type / no return    Abyss x = 10;
+
+ Declarations        _Bool / bool         Oath                 Boolean type           Oath x = 10;
+
+ Declarations        struct               Surge                Record type            Surge s {Metal a, Metal b }
+
+ Declarations        enum                 Order                Enumeration type       Order day {Sun,Mon}
+
+ Declarations        typedef              spren                Type alias             spren Metal int
+
+ Declarations        const                Undead               Read-only qualifier    Undead x = 10;
+
+ Literals            integer literal      integer literal      e.g., 0, 12, 999       x = 42;
+
+ Literals            float literal        float literal        e.g., 3.14             y = 3.14;
+
+ Literals            char literal         char literal         e.g., 'a'              c = 'z';
+
+ Literals            string literal       string literal       e.g., "hello"          s = "hi";
+
+ Operators           +-*/%                +-*/%                Arithmetic operators   c = a + b;
+
+ Operators           =                    =                    Assignment             x = 10;
+
+ Operators           == != < > <= >=      == != < > <= >=      Relational operators   if (x >= 10) { }
+
+ Operators           && || !              Together Alone Not   Logical operators      Together Alone Not;
+
+ Operators           & | ^ ~ << >>        & | ^ ~ << >>        Bitwise operators      m = (a << 1) | b;
+
+ Operators           ++ --                ++ --                Increment/decrement    i++; --j;
+
+ Control             if                   Intent               Conditional            Intent (x>10){ }
+
+ Control             else                 Otherwise            Else branch            Otherwise { }
+
+ Control             while                AsLong               Loop while true        AsLong( x<10){ }
+
+ Control             do ... while         Run ... AsLong       Post-test loop         Run { } AsLong
+
+ Control             for                  Cycle                Counted loop           Cycle( i=0; i< N ; i++ )
+
+ Control             break                Shatter              Exit loop/switch       Shatter;
+
+ Control             continue             Persist              Next iteration         Persist;
+
+ Control             return               Ascend               Return from function   Ascend x;
+Category              C                     Your Syntax              Description            Example
+                      Keyword/Symbol
+
+Functions             function definition   SoulCast func(Metal a,   Define a function      SoulCast func(Metal a, Metal b){
+                                            Metal b)                                        return a+b }
+
+Functions             function call         func(params)             Call a function        func(a,b)
+
+Functions             parameters            parameters               Function parameters    parameters x = 10;
+
+Functions             main()                main()                   Program entry point    int main(){return 0;}
+
+I/O                   printf                Reveal                   Output                 Reaveal x
+
+I/O                   scanf                 Bind                     Input                  Bind x
+
+Symbols               {}                    Manifest Conceal         Block delimiters       Manifest Conceal;
+
+Symbols               ()                    ()                       Grouping/calls         f(a,b)
+
+Symbols               []                    []                       Array indexing         a[i]
+
+Symbols               ;                     ;                        Statement terminator   x=1;
+
+Symbols               ,                     ,                        Separator              f(a, b)
+
+Safe null-aware       N/A                   ??                       Checks for null in     name = input() ?? "unknown";
+operator                                                             input
+
+(block-exit action)   N/A                   defer                    Delays the execution   { defer print("done"); work(); }
+Unique Features
+
+Safe Null-Aware Operator (??)
+
+CosmereLang includes a null-aware operator (??) that safely handles missing or
+undefined values by returning a fallback expression when the primary value is null. This
+reduces the need for explicit conditional checks and helps prevent runtime errors caused
+by invalid input. Unlike C, which lacks built-in null safety, this feature promotes safer and
+more readable code while remaining simple to implement at the compiler level.
+
+
+Deferred Block Execution (defer)
+
+CosmereLang provides a deferred execution mechanism that allows a block of code to be
+executed automatically when the surrounding scope exits. This ensures that cleanup or
+final actions are performed reliably without manual control flow management. Since C has
+no native support for deferred execution, this feature improves code structure and
+maintainability while being straightforward to implement using scope tracking in the
+compiler.
+

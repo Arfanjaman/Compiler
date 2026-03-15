@@ -7,6 +7,7 @@
 #include <sys/stat.h>
 #define COSMERE_MKDIR(path) mkdir(path, 0777)
 #endif
+#include "debug_output.h"
 #include "ast.h"
 #include "semantic.h"
 #include "interpreter.h"

@@ -1,0 +1,34 @@
+                               Token Definitions
+
+ Lexical Analysis using Flex   Handling Invalid Tokens
+
+                               Integration with Bison
+
+Syntax Analysis using Bison    Well-defined grammar rules
+                               aligned with project proposal
+
+                               Syntax Error Handling           Example Scenario:
+                                                               Type checking, Implicit Type
+                                                               conversion, Variable
+                                                               Declaration etc.
+
+                               Organized parsing logic
+
+Correctness of Execution       Variable Declaration &          Example Scenario:
+Behavior                       Assignment                      ✔ Program can declare
+                                                               variables, Assign values,
+                               Expression Evaluation           Print variables
+                                                               ✔ Loops execute correctly
+                                                               ✔ Functions return correct
+                               Conditional Statements          results
+                               (if/else)                       etc.
+
+                               Loops,Functions
+
+
+Unique / Advanced Features     Extra feature                   Example Scenario:
+                                                               ✔ Intermediate Code
+                                                               Generation
+                                                               ✔ Any code optimization
+                                                               technique
+

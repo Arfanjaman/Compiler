@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -std=c11 -Iinclude -Isrc
 FLEX = flex
 BISON = bison
 
-SRC = src/ast.c src/value.c src/symbol_table.c src/semantic.c src/interpreter.c  src/main.c src/parser.tab.c src/lex.yy.c
+SRC = src/ast.c src/value.c src/symbol_table.c src/semantic.c src/interpreter.c src/debug_output.c src/main.c src/parser.tab.c src/lex.yy.c
 OBJ = $(SRC:.c=.o)
 TARGET = cosmerelang.exe
 

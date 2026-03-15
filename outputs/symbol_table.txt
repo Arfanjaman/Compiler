@@ -1,0 +1,2 @@
+=== Symbol Table ===
+name=main	kind=function	type=Abyss	scope=global
