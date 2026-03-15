@@ -1,0 +1,9 @@
+Surge Pair Manifest
+    Metal left;
+    Metal right;
+Conceal
+
+SoulCast Abyss main() Manifest
+    Pair p = Pair(1, 2);
+    Reveal(p.middle);
+Conceal

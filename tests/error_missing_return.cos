@@ -1,0 +1,7 @@
+SoulCast Metal nope() Manifest
+    Reveal(1);
+Conceal
+
+SoulCast Abyss main() Manifest
+    Reveal(nope());
+Conceal

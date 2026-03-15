@@ -1,0 +1,11 @@
+SoulCast Abyss main() Manifest
+    Scroll name = Null ?? "unknown";
+    Reveal(name);
+
+    Manifest
+        defer Manifest
+            Reveal("cleanup");
+        Conceal;
+        Reveal("work");
+    Conceal
+Conceal

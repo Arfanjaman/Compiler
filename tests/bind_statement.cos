@@ -1,0 +1,5 @@
+SoulCast Abyss main() Manifest
+    Metal x;
+    Bind x;
+    Reveal(x);
+Conceal

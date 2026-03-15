@@ -1,0 +1,4 @@
+SoulCast Abyss main() Manifest
+    Metal[] nums = [1, 2, "bad"];
+    Reveal(nums[0]);
+Conceal

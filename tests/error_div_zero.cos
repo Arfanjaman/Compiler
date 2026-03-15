@@ -1,0 +1,4 @@
+SoulCast Abyss main() Manifest
+    Metal x = 10 / 0;
+    Reveal(x);
+Conceal
